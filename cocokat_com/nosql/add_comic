@@ -1,0 +1,9 @@
+comic1 = Comic()
+comic1.name = 'Cloud Toast'
+comic1.issue_number = 1
+comic1.panels = []
+panel1 = ComicPanel()
+panel1.img_src = 'static/images/toast1.svg'
+panel1.alt_text = 'Comic 1: Toast'
+comic1.panels.append(panel1)
+comic1.save()
