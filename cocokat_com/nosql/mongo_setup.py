@@ -4,7 +4,7 @@ import mongoengine
 
 
 def global_init(user=None, password=None, port=27017,
-                server='172.20.10.8', use_ssl=True, db_name='cocokat'):
+                server='192.168.160.1', use_ssl=True, db_name='cocokat'):
     if user or password:
         # noinspection PyUnresolvedReferences
         data = dict(

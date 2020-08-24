@@ -4,10 +4,16 @@ from cocokat_com.nosql.comics import Comic
 from cocokat_com.nosql.comicpanel import ComicPanel
 
 
+def get_comic_by_name(name: str) -> Comic:
+    comic = Comic.objects().filter(name=name).first()
+
+    return comic
+
+
 def get_comic_panels(
-    comic_name: str,
-    panel_start: int = None,
-    panel_end: int = None) -> Dict:
+        comic_name: str,
+        panel_start: int = None,
+        panel_end: int = None) -> Dict:
 
     comic = Comic.objects().filter(name=comic_name).first()
 
